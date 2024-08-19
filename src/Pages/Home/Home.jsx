@@ -23,7 +23,7 @@ const Home = () => {
       <div className="bg-gray-200 w-full px-4 py-4">
         <div className="flex flex-row justify-between">
           <FaQuestion className="text-3xl bg-black text-white py-2 rounded-full mobile:hidden" />
-          <FaUser className="text-2xl mobile:top-4 mobile:right-4 mobile:absolute mobile:text-[rgb(129,0,129)] mobile:text-[30px]" />
+          <FaUser className="text-2xl mobile:top-4 mobile:right-2 mobile:absolute mobile:text-[rgb(129,0,129)] mobile:text-[30px]" />
         </div>
         <div className="flex flex-row gap-5 justify-center items-center mt-6 mb-2 mobile:flex mobile:flex-row mobile:mt-14 mobile:items-center">
           <button className="flex flex-col border border-gray-300 rounded-lg bg-white px-24 mobile:px-4 mobile:w-40">
@@ -91,24 +91,24 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-row mt-6 gap-5 ml-5">
+      <div className="flex flex-row mt-6 gap-5 ml-5 mobile:ml-8">
         <Link
           to="/airtime"
-          className="flex flex-col justify-center items-center bg-white rounded-lg w-56 border border-[rgb(129,0,129)] p-3 hover:bg-[rgb(241,179,241)] hover:border-none mobile:w-28"
+          className="flex flex-col justify-center items-center bg-white rounded-lg w-56 border border-[rgb(129,0,129)] p-3 hover:bg-[rgb(241,179,241)] hover:border-none mobile:w-24"
         >
           <FaCreditCard />
           Airtime
         </Link>
         <Link
           to="/data"
-          className="flex flex-col justify-center items-center bg-white rounded-lg w-56 border border-[rgb(129,0,129)] p-3 hover:bg-[rgb(241,179,241)] hover:border-none mobile:w-28"
+          className="flex flex-col justify-center items-center bg-white rounded-lg w-56 border border-[rgb(129,0,129)] p-3 hover:bg-[rgb(241,179,241)] hover:border-none mobile:w-24"
         >
           <FaRss />
           Data
         </Link>
         <Link
           to="/paybill"
-          className="flex flex-col justify-center items-center bg-white rounded-lg w-56 border border-[rgb(129,0,129)] p-3 hover:bg-[rgb(241,179,241)] hover:border-none mobile:w-28"
+          className="flex flex-col justify-center items-center bg-white rounded-lg w-56 border border-[rgb(129,0,129)] p-3 hover:bg-[rgb(241,179,241)] hover:border-none mobile:w-24"
         >
           <FaMoneyBill1Wave />
           Pay Bill

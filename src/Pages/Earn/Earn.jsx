@@ -5,7 +5,7 @@ import { FaGift } from "react-icons/fa6";
 const Earn = () => {
   return (
     <div>
-      <div className="flex justify-center items-center flex-col gap-5 mt-20">
+      <div className="flex justify-center items-center flex-col gap-5 mt-20 mobile:w-[80%] mobile:ml-10">
         <div className="flex justify-center items-center flex-col gap-5">
           <FaGift className="text-6xl text-[rgb(129,0,129)]" />
           <h1 className="text-3xl font-semibold">Invites Friend and Earn</h1>

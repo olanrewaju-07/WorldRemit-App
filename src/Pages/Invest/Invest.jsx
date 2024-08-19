@@ -5,7 +5,7 @@ import { FaPercentage, FaSignal, FaShieldAlt , FaBolt} from "react-icons/fa";
 
 const Invest = () => {
   return (
-    <div>
+    <div className='mobile:w-[80%]'>
       <h2 className="text-3xl text-center font-bold mt-8  mobile:text-xl mobile:mt-10">
         Stocks Investing for Everyone
       </h2>
@@ -52,7 +52,7 @@ const Invest = () => {
           </div>
         </div>
       </div>
-      <button className="bg-[rgb(129,0,129)] text-white text-xl font-semibold p-2 rounded-lg w-[50%] mt-24 ml-80 mobile:ml-24">
+      <button className="bg-[rgb(129,0,129)] text-white text-xl font-semibold p-2 rounded-lg w-[50%] mt-24 ml-80 mobile:ml-24 mobile:mb-10">
         Begin Investing
       </button>
     </div>
