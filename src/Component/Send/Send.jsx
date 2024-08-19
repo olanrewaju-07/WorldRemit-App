@@ -3,6 +3,44 @@ import { Link } from 'react-router-dom';
 import { GoArrowLeft } from 'react-icons/go';
 
 const Send = () => {
+  const axios = require("axios");
+
+  // Replace with your actual Paystack test secret key
+  const PAYSTACK_SECRET_KEY = "sk_test_a52e6a49d9baeb6da1f389cdb3d0984b774bde67";
+
+  // Function to fetch account holder name
+  const fetchAccountHolderName = async (accountNumber, bankCode) => {
+    try {
+      const response = await axios.get("https://api.paystack.co/bank/resolve?account_number=0001234567&bank_code=058", {
+        params: {
+          account_number: accountNumber,
+          bank_code: bankCode,
+        },
+        headers: {
+          Authorization: `Bearer ${PAYSTACK_SECRET_KEY}`,
+        },
+      });
+
+      if (response.data.status) {
+        const accountHolderName = response.data.data.account_name;
+        console.log(`Account Holder Name: ${accountHolderName}`);
+        return accountHolderName;
+      } else {
+        console.error("Failed to fetch account holder name");
+        return null;
+      }
+    } catch (error) {
+      console.error(`Error fetching account holder name: ${error.message}`);
+      return null;
+    }
+  };
+
+  // Example usage
+  const accountNumber = "1234567890"; // Replace with actual account number
+  const bankCode = "044"; // Replace with actual bank code
+
+  fetchAccountHolderName(accountNumber, bankCode);
+
   return (
     <div>
       <Link to="/home">

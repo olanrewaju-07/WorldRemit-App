@@ -9,7 +9,7 @@ const Earn = () => {
         <div className="flex justify-center items-center flex-col gap-5">
           <FaGift className="text-6xl text-[rgb(129,0,129)]" />
           <h1 className="text-3xl font-semibold">Invites Friend and Earn</h1>
-          <p>
+          <p className='mobile:text-center mobile:text-[20px] mobile:w-[80%]'>
             Invite your friend in the US and 4000.00 when they send at least $30
             to an Africa country
           </p>
