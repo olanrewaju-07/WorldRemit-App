@@ -45,7 +45,7 @@ const Airtime = () => {
   return (
     <div className="bg-gray-300 min-h-screen">
       <Link to="/home">
-        <GoArrowLeft className="text-black text-3xl ml-4 " />
+        <GoArrowLeft className="text-black text-3xl ml-4  mobile:text-4xl " />
       </Link>
       <div className="flex flex-row justify-center items-center gap-8">
         <div className="">
@@ -68,7 +68,7 @@ const Airtime = () => {
           className="block w-[60%] p-2 shadow-sm bg-[rgb(241,179,241)] outline-none mt-6 placeholder-black border-b-2 border-[rgb(129,0,129)]"
         />
       </div>
-      <div className="flex flex-col bg-white w-[90%] mt-10 ml-14 rounded-md">
+      <div className="flex flex-col bg-white w-[90%] mt-10 ml-14 rounded-md mobile:flex mobile:justify-center mobile:ml-5">
         <h1 className="text-2xl font-semibold mt-2 ml-2">Top up</h1>
         <div className="grid grid-cols-3 gap-x-4 gap-y-6 ml-3 mr-3 mb-3 mt-4 ">
           {[50, 100, 200, 500, 1000, 2000].map((amount) => (
@@ -77,7 +77,7 @@ const Airtime = () => {
               className="flex flex-col bg-gray-200 p-4 text-center rounded-lg hover:bg-[rgb(241,179,241)] cursor-pointer"
               onClick={() => handleAmountClick(amount)}
             >
-              <h2 className="text-3xl font-bold">₦{amount}</h2>
+              <h2 className="text-3xl font-bold mobile:text-xl">₦{amount}</h2>
               <span className="text-[rgb(129,0,129)] text-l">
                 cashback ₦{Math.floor(amount / 50)}
               </span>

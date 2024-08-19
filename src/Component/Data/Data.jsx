@@ -82,7 +82,7 @@ const Data = () => {
           className="block w-[60%] p-2 shadow-sm bg-[rgb(241,179,241)] outline-none mt-6 placeholder-black border-b-2 border-[rgb(129,0,129)]"
         />
       </div>
-      <div className="flex flex-col bg-white w-[90%] mt-10 ml-14 rounded-md">
+      <div className="flex flex-col bg-white w-[90%] mt-10 ml-14 rounded-md mobile:ml-5">
         <h1 className="text-2xl font-semibold mt-2 ml-2">Hot Deal</h1>
         <div className="grid grid-cols-3 gap-x-4 gap-y-6 ml-3 mr-3 mb-3 mt-4 ">
           {plans.map((plan, index) => (
@@ -91,7 +91,7 @@ const Data = () => {
               onClick={() => handleRechargeClick(plan)}
               className="flex flex-col bg-gray-200 p-4 text-center rounded-lg hover:bg-[rgb(241,179,241)] cursor-pointer"
             >
-              <h2 className="text-3xl font-semibold">{plan.amount}</h2>
+              <h2 className="text-3xl font-semibold mobile:text-xl">{plan.amount}</h2>
               <p className="text-l font-mono">{plan.duration}</p>
               <span className="text-[rgb(129,0,129)] font-medium">
                 {plan.price}

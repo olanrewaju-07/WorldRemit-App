@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { GoArrowLeft } from 'react-icons/go';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { GoArrowLeft } from "react-icons/go";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -16,9 +16,10 @@ const Login = () => {
     setError("");
     return true;
   };
+
   // Prevent default form submission
   const handleLogin = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
     // Function to redirect back to home
     if (validateForm()) {
@@ -27,20 +28,21 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <Link to="/">
-        <GoArrowLeft className="text-[rgb(129,0,129)] text-4xl ml-4" />
+    <div className="bg-gray-200 min-h-screen">
+      <Link to="/" className="self-start">
+        <GoArrowLeft className="text-[rgb(129,0,129)] text-4xl" />
       </Link>
-
-      <div className="flex min-h-36 justify-center items-center mt-20">
-        <div className="bg-white p-8 rounded-lg shadow-lg w-[80%] max-w-md">
-          <h2 className="text-[rgb(129,0,129)] text-xl font-semibold">Login</h2>
+      <div className="flex justify-center items-center w-full mt-8 mobile:px-4 mobile:mt-56">
+        <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+          <h2 className="text-[rgb(129,0,129)] text-xl font-semibold mb-4">
+            Login
+          </h2>
           <form onSubmit={handleLogin}>
-            {error && <div className="text-red-600 mb-4 mt-4">{error}</div>}
-            <div className="mb-3">
+            {error && <div className="text-red-600 mb-4">{error}</div>}
+            <div className="mb-4">
               <label
                 htmlFor="email"
-                className="block text-sm font-semibold text-black mt-4 ml-4"
+                className="block text-sm font-semibold text-black mb-2"
               >
                 Email:
               </label>
@@ -50,13 +52,13 @@ const Login = () => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-2 ml-4 outline-none border w-[90%] px-2 py-2 rounded-lg shadow-sm"
+                className="w-full px-3 py-2 border rounded-lg shadow-sm outline-none"
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-4">
               <label
                 htmlFor="password"
-                className="block text-sm font-semibold text-black mt-4 ml-4"
+                className="block text-sm font-semibold text-black mb-2"
               >
                 Password:
               </label>
@@ -66,22 +68,22 @@ const Login = () => {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-2 ml-4 outline-none border w-[90%] px-2 py-2 rounded-lg shadow-sm"
+                className="w-full px-3 py-2 border rounded-lg shadow-sm outline-none"
               />
             </div>
             <a
               href="#"
-              className="text-[rgb(129,0,129)] text-sm font-medium text-right block"
+              className="text-[rgb(129,0,129)] text-sm font-medium block text-right mb-4"
             >
               Forget password?
             </a>
             <button
               type="submit"
-              className="w-full rounded-lg text-white bg-[rgb(129,0,129)] shadow-sm py-2 mt-4"
+              className="w-full bg-[rgb(129,0,129)] text-white py-2 rounded-lg shadow-sm"
             >
               Log in
             </button>
-            <p className="mt-4 text-center block font-semibold">
+            <p className="mt-4 text-center font-semibold">
               Don't have an account?{" "}
               <Link to="/signup" className="text-[rgb(129,0,129)]">
                 Sign up
@@ -92,6 +94,6 @@ const Login = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Login;
